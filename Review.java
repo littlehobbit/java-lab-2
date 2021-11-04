@@ -14,6 +14,22 @@ public class Review {
         this.filmId = filmId;
     }
 
+    public int getUserId() {
+        return authorId;
+    }
+
+    public boolean isBadMark() {
+        return mark <= 2;
+    }
+
+    public int getMark() {
+        return mark;
+    }
+
+    public int getFilm() {
+        return filmId;
+    }
+
     public static Review fromString(String string) {
         Scanner scanner = new Scanner(string);
         scanner.useDelimiter(",");

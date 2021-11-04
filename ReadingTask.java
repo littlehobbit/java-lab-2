@@ -7,8 +7,9 @@ public class ReadingTask implements Runnable {
     private Scanner scanner;
     private FilmsReviews filmsReviews;
 
-    public ReadingTask(File file) throws FileNotFoundException {
-        this.scanner = new Scanner(file);
+    public ReadingTask(FilmsReviews dst, File src) throws FileNotFoundException {
+        this.scanner = new Scanner(src);
+        this.filmsReviews = dst;
     }
 
     @Override
